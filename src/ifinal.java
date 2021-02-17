@@ -15,7 +15,6 @@ import javax.swing.JOptionPane;
  */
 public class ifinal extends javax.swing.JFrame {
 
-
     /**
      * Creates new form ifinal
      */
