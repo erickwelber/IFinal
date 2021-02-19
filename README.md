@@ -1,6 +1,6 @@
 # IFinal
 ## _Aplicativo escolar simples._
-Aplicativo desenvolvido durante as aulas de Java na faculdade com o objetivo de calcular a nota do aluno, ou seja o qaunto ele precisa tirar caso o mesmo vá para a final
+Aplicativo desenvolvido durante as aulas de Java na faculdade com o objetivo de calcular a nota do aluno, ou seja o qaunto ele precisa tirar caso o mesmo vá para a final.
 
 <br/>
 
