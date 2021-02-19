@@ -25,6 +25,9 @@ public class ifinal extends javax.swing.JFrame {
 
     private void exibirMsg(String msg) {
         JOptionPane.showMessageDialog(rootPane, msg);
+        jTextField1.setBackground(Color.white);
+        jTextField2.setBackground(Color.white);
+        jTextField3.setBackground(Color.white);
     }
 
     /**
@@ -230,23 +233,42 @@ public class ifinal extends javax.swing.JFrame {
             float media2 = Float.parseFloat(jTextField2.getText());
             float media3 = Float.parseFloat(jTextField3.getText());
             float resultado = (15 - (((media1 + media2 + media3) * 2) / 3));
-            if (resultado <= 1) {
+            
+            if((media1 < 0) || (media2 < 0) || (media3 < 0)){
+                jTextField1.setBackground(Color.red);
+                jTextField2.setBackground(Color.red);
+                jTextField3.setBackground(Color.red);
+                exibirMsg("Números negativos não permitidos.");
+                jTextField1.setText("");
+                jTextField2.setText("");
+                jTextField3.setText("");
+                jTextField4.setText("");
+            }else{
+                
+                if (resultado <= 1) {
                 jTextField4.setText("Você está aprovado!");
-            } else if (resultado > 1) {
+                } else if (resultado > 1) {
                 jTextField4.setText("Você precisa tirar: " + resultado + "");
+                }
+                
             }
+            
+            
 
             jTextField1.setBackground(Color.white);
             jTextField2.setBackground(Color.white);
             jTextField3.setBackground(Color.white);
 
         } catch (Exception virgula) {
-            exibirMsg("Utilize 'Ponto' no lugar de 'Vírgula'");
-            Logger.getGlobal().log(Level.SEVERE, virgula.toString());
-            System.out.println(virgula.toString());
             jTextField1.setBackground(Color.red);
             jTextField2.setBackground(Color.red);
             jTextField3.setBackground(Color.red);
+            
+            exibirMsg("Campo vazio ou 'Ponto' no lugar de 'Vírgula'");
+            Logger.getGlobal().log(Level.SEVERE, virgula.toString());
+            System.out.println(virgula.toString());
+            
+            
 
             jTextField1.setText("");
             jTextField2.setText("");
